@@ -12,10 +12,12 @@ import LogoutPage from './pages/LogoutPage';
 import CreateStoryPage from './pages/CreateStoryPage';
 import MyStoriesPage from './pages/MyStoriesPage';
 import EditStoryPage from './pages/EditStoryPage';
+import PreventNavigation from './components/PreventNavigation.jsx';
 
 function App() {
   return (
     <Router>
+      <PreventNavigation/>
       <Routes>
       <Route path="/" element={<Login />}/>
         <Route path="/register" element={<Register />} />
