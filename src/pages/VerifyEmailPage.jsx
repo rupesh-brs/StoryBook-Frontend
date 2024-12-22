@@ -1,5 +1,6 @@
 import  { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Navbar from '../Navbar';
 
 const VerifyEmailPage = () => {
   const { verify_token } = useParams();  // Extract token from the URL
@@ -41,6 +42,8 @@ const VerifyEmailPage = () => {
   }, [verify_token, navigate]);
 
   return (
+    <>
+    <Navbar/>
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-md w-full bg-white p-8 shadow-md rounded-md">
         <h1 className="text-2xl font-bold mb-6">Email Verification</h1>
@@ -53,6 +56,7 @@ const VerifyEmailPage = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 
