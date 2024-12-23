@@ -36,7 +36,7 @@ const CreateStoryPage = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/stories/create',
+        'https://storybook-backend-z7js.onrender.com/api/stories/create',
         { title, content },
         {
           headers: {
@@ -50,7 +50,7 @@ const CreateStoryPage = () => {
 
         if (publish) {
           await axios.post(
-            `http://localhost:5000/api/stories/publish/${storyId}`,
+            `https://storybook-backend-z7js.onrender.com/api/stories/publish/${storyId}`,
             {},
             {
               headers: {

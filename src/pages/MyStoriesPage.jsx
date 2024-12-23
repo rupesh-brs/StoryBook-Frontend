@@ -13,7 +13,7 @@ const MyStoriesPage = () => {
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/stories/mine", {
+        const response = await axios.get("https://storybook-backend-z7js.onrender.com/api/stories/mine", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -33,7 +33,7 @@ const MyStoriesPage = () => {
 
   const handleDelete = async (storyId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/stories/delete/${storyId}`, {
+      await axios.delete(`https://storybook-backend-z7js.onrender.com/api/stories/delete/${storyId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -46,7 +46,7 @@ const MyStoriesPage = () => {
 
   const handlePublish = async (storyId) => {
     try {
-      await axios.post(`http://localhost:5000/api/stories/publish/${storyId}`, {}, {
+      await axios.post(`https://storybook-backend-z7js.onrender.com/api/stories/publish/${storyId}`, {}, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

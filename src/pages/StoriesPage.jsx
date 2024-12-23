@@ -14,7 +14,7 @@ const StoriesPage = () => {
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/stories/getstories', {
+        const response = await axios.get('https://storybook-backend-z7js.onrender.com/api/stories/getstories', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -47,7 +47,7 @@ const StoriesPage = () => {
 
   const handleLike = async (storyId) => {
     try {
-      const response = await axios.post(`http://localhost:5000/api/stories/like/${storyId}`, {}, {
+      const response = await axios.post(`https://storybook-backend-z7js.onrender.com/api/stories/like/${storyId}`, {}, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -73,7 +73,7 @@ const StoriesPage = () => {
   const handleCommentSubmit = async (storyId) => {
     if (commentText[storyId]?.trim()) {
       try {
-        const response = await axios.post(`http://localhost:5000/api/stories/comment/${storyId}`, {
+        const response = await axios.post(`https://storybook-backend-z7js.onrender.com/api/stories/comment/${storyId}`, {
           comment: commentText[storyId],
         }, {
           headers: {

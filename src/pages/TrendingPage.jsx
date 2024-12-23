@@ -10,7 +10,7 @@ const TrendingPage = () => {
   useEffect(() => {
     // Fetch trending stories from the backend
     axios
-      .get("http://localhost:5000/api/stories/trending")
+      .get("https://storybook-backend-z7js.onrender.com/api/stories/trending")
       .then((response) => {
         setTrendingStories(response.data.trendingStories);
         setLoading(false);

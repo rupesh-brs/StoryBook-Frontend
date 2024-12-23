@@ -14,7 +14,7 @@ const EditStoryPage = () => {
   useEffect(() => {
     const fetchStory = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/stories/${storyId}`, {
+        const response = await axios.get(`https://storybook-backend-z7js.onrender.com/api/stories/${storyId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -43,7 +43,7 @@ const EditStoryPage = () => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/stories/edit/${storyId}`,
+        `https://storybook-backend-z7js.onrender.com/api/stories/edit/${storyId}`,
         { title, content },
         {
           headers: {

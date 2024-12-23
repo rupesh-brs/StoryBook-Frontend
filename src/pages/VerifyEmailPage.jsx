@@ -12,7 +12,7 @@ const VerifyEmailPage = () => {
     const verifyEmail = async () => {
       try {
         // Send the token to the backend for verification
-        const response = await fetch(`http://localhost:5000/api/auth/verifyEmail/${verify_token}`, {
+        const response = await fetch(`https://storybook-backend-z7js.onrender.com/api/auth/verifyEmail/${verify_token}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
